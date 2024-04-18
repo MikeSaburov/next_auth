@@ -6,6 +6,7 @@ export default function Home() {
       <Button variant="outline">Button</Button>
       <Button>Button-2</Button>
       <Button variant="destructive">Destructive</Button>
+      <Button variant="primary">Primary</Button>
     </main>
   );
 }
