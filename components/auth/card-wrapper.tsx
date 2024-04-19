@@ -1,6 +1,11 @@
 'use client';
 
-import { Card } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from '@/components/ui/card';
 
 interface CardWrapperProps {
   children: React.ReactNode;
@@ -17,5 +22,5 @@ export const CardWrapper = ({
   backButtonHref,
   showSocial,
 }: CardWrapperProps) => {
-  return <Card></Card>;
+  return <Card className="w-[400px] shadow-md">{children}</Card>;
 };
