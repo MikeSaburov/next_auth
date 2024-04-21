@@ -28,7 +28,8 @@ export const CardWrapper = ({
       <CardHeader>
         <Header label={headerLabel} />
       </CardHeader>
-      {children}
+      <CardContent>{children}</CardContent>
+      {showSocial && <CardFooter>footer</CardFooter>}
     </Card>
   );
 };
