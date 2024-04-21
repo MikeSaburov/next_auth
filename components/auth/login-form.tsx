@@ -16,6 +16,8 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 
+import { Input } from '@/components/ui/input';
+
 export const LoginForm = () => {
   const form = useForm<z.infer<typeof LoginSchema>>({
     resolver: zodResolver(LoginSchema),
@@ -32,7 +34,29 @@ export const LoginForm = () => {
       backButtonHref="/auth/register"
       showSocial
     >
-      Login
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(() => {})} className="space-y-6">
+          <div className="space-y-4">
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input
+                      {...field}
+                      placeholder="email@examle.com"
+                      type="email"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        </form>
+      </Form>
     </CardWrapper>
   );
 };
