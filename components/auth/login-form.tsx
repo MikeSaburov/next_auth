@@ -28,6 +28,10 @@ export const LoginForm = () => {
     },
   });
 
+  const onSubmit = (values: z.infer<typeof LoginSchema>) => {
+    console.log(values);
+  };
+
   return (
     <CardWrapper
       headerLabel="Welcome back"
@@ -36,7 +40,7 @@ export const LoginForm = () => {
       showSocial
     >
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(() => {})} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-4">
             <FormField
               control={form.control}
