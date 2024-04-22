@@ -75,7 +75,7 @@ export const LoginForm = () => {
               )}
             />
           </div>
-          <FormError />
+          <FormError message="Что то пошло не так!" />
           <Button type="submit" className="w-full">
             Login
           </Button>
