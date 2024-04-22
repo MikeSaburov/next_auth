@@ -18,6 +18,7 @@ import {
 
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { FormError } from '@/components/form-error';
 
 export const LoginForm = () => {
   const form = useForm<z.infer<typeof LoginSchema>>({
@@ -74,7 +75,7 @@ export const LoginForm = () => {
               )}
             />
           </div>
-
+          <FormError />
           <Button type="submit" className="w-full">
             Login
           </Button>
