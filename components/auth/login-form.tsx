@@ -76,8 +76,8 @@ export const LoginForm = () => {
               )}
             />
           </div>
-          <FormError message="Что то пошло не так!" />
-          <FormSuccess message="Все прошло успешно!" />
+          <FormError message="" />
+          <FormSuccess message="" />
           <Button type="submit" className="w-full">
             Login
           </Button>
