@@ -49,8 +49,8 @@ export const LoginForm = () => {
 
   return (
     <CardWrapper
-      headerLabel="Welcome back"
-      backButtonLabel="Don't have an account?"
+      headerLabel="С возвращением"
+      backButtonLabel="У тебя еще нет аккаунта?"
       backButtonHref="/auth/register"
       showSocial
     >
