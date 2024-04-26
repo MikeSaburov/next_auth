@@ -9,6 +9,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
+//создаем модель пользователя
 model User {
   id String @id @default(cuid())
   name String
