@@ -17,9 +17,6 @@ model User {
   emailVerified DateTime?
   image         String?
   accounts      Account[]
-  sessions      Session[]
-
-  Authenticator Authenticator[]
 }
 
 model Account {
