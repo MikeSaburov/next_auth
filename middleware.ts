@@ -1,10 +1,13 @@
 import { auth } from './auth';
 
 export default auth((req) => {
+  const isLoggedIn = !!req.auth;
+  console.log('IS LOGGEDIN:', isLoggedIn);
+
   // req.auth
 });
 
 // Optionally, don't invoke Middleware on some paths
 export const config = {
-  matcher: ['/((?!.+\\.[\\w]+$|_next).*', '/', '/(api|trpc)(.*)'],
+  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };
