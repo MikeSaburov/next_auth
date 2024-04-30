@@ -1,7 +1,8 @@
 import authConfig from './auth.config';
 import NextAuth from 'next-auth';
 
-const { auth } = NextAuth(authConfig);
+export const { auth } = NextAuth(authConfig);
+
 import {
   DEFAULT_LOGIN_REDIRECT,
   apiAuthPrefix,
@@ -28,6 +29,12 @@ export default auth((req) => {
 
     return null;
   }
+
+  if (!isLoggedIn && !isPublicRoute) {
+    return Response.redirect(new URL('/auth/login', nextUrl));
+  }
+
+  return null;
 });
 
 // Optionally, don't invoke Middleware on some paths
